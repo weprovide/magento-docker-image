@@ -15,6 +15,8 @@ jobs:
         run: echo "::set-output name=matrix::{\"include\":[{\"version\":\"2.4.1\",\"php\":{\"version\":\"7.4\",\"variant\":\"alpine\"}}]}"
 
   build:
+    needs: generate-jobs
+    strategy: ${{ fromJson(needs.generate-jobs.outputs.strategy) }}
     name: "${{ matrix.version }}-php-${{ matrix.php.version }}-${{ matrix.php.variant }}"
     runs-on: ubuntu-latest
     steps:
