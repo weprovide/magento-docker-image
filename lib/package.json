@@ -3,6 +3,7 @@
     "versions": "node index.js"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "semver": "^7.3.4"
   }
 }
