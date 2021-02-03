@@ -16,8 +16,10 @@ jobs:
       - uses: php-actions/composer@v5
         with:
           only_args: --version
+      - name: Add Composer Credentials
+        run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json
       - id: install-dependencies
-        name: Install Dependencies
+        name: Install NPM Dependencies
         run: npm install
         working-directory: ./lib
       - id: generate-jobs
