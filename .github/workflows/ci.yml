@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
       - id: generate-jobs
         name: Generate Jobs
-        run: echo "::set-output name=matrix::{\"include\":[{\"version\":\"2.4.1\",\"php\":{\"version\":\"7.4\",\"variant\":\"alpine\"}}]}"
+        run: echo "::set-output name=strategy::{\"include\":[{\"version\":\"2.4.1\",\"php\":{\"version\":\"7.4\",\"variant\":\"alpine\"}}]}"
 
   build:
     needs: generate-jobs
