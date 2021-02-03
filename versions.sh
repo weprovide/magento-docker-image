@@ -9,6 +9,7 @@
 # 4. map each version to their matching semver version in "versions.json"
 
 # {
+#     "matrix": {
 #     "include": [
 #         {
 #             "version": "2.4.1",
@@ -16,9 +17,11 @@
 #                 "magento:2.4.1-php-7.4-alpine",
 #                 "magento:2.4-php-7.4-alpine",
 #                 "magento:2-php-7.4-alpine",
-#                 "magento:2.4-alpine"
+#                 "magento:2.4-alpine",
+#                 "magento:2-alpine"
 #             ],
 #             ... configuration from "versions.json" matching this version
-#         }
-#     ]
+#             }
+#         ]
+#     }
 # }

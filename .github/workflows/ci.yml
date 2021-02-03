@@ -10,9 +10,12 @@ jobs:
       strategy: ${{ steps.generate-jobs.outputs.strategy }}
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
       - id: generate-jobs
         name: Generate Jobs
-        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[{\"version\":\"2.4.1\",\"php\":{\"version\":\"7.4\",\"variant\":\"alpine\"}}]}}"
+        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[$(./versions.js)]}}"
 
   build:
     needs: generate-jobs
