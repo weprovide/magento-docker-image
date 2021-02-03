@@ -19,7 +19,7 @@ jobs:
       - name: Add Composer Credentials
         run: echo '${{ secrets.COMPOSER_AUTH_JSON }}' > $GITHUB_WORKSPACE/auth.json
       - name: Add Magento Composer Repository
-        run: composer config -g repo.packagist false && composer config -g repositories.repo.magento.com composer
+        run: composer config -g repo.packagist false && composer config -g repositories.repo.magento.com composer https://repo.magento.com
       - id: install-dependencies
         name: Install NPM Dependencies
         run: npm install
