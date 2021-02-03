@@ -1,0 +1,93 @@
+{
+    ">= 2.4": {
+        "php": {
+            "variants": [
+                {
+                    "version": "7.4",
+                    "variant": "buster"
+                },
+                {
+                    "version": "7.4",
+                    "variant": "alpine3.13"
+                },
+                {
+                    "version": "7.4",
+                    "variant": "alpine3.12"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "buster"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "stretch"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "alpine3.13"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "alpine3.12"
+                }
+            ],
+            "extensions": [
+                "ext-bcmath",
+                "ext-ctype",
+                "ext-curl",
+                "ext-dom",
+                "ext-gd",
+                "ext-hash",
+                "ext-iconv",
+                "ext-intl",
+                "ext-mbstring",
+                "ext-openssl",
+                "ext-pdo_mysql",
+                "ext-simplexml",
+                "ext-soap",
+                "ext-xsl",
+                "ext-zip",
+                "ext-sockets"
+            ]
+        }
+    },
+    ">= 2.3": {
+        "php": {
+            "variants": [
+                {
+                    "version": "7.3",
+                    "variant": "buster"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "stretch"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "alpine3.13"
+                },
+                {
+                    "version": "7.3",
+                    "variant": "alpine3.12"
+                }
+            ],
+            "extensions": [
+                "ext-bcmath",
+                "ext-ctype",
+                "ext-curl",
+                "ext-dom",
+                "ext-gd",
+                "ext-hash",
+                "ext-iconv",
+                "ext-intl",
+                "ext-mbstring",
+                "ext-openssl",
+                "ext-pdo_mysql",
+                "ext-simplexml",
+                "ext-soap",
+                "ext-xsl",
+                "ext-zip"
+            ]
+        }
+    }
+}

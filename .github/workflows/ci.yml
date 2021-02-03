@@ -1,0 +1,29 @@
+name: GitHub CI
+
+on:
+  schedule:
+    - cron: 0 0 * * 0
+
+jobs:
+  generate-jobs:
+    name: Generate  Jobs
+    runs-on: ubuntu-latest
+    outputs:
+      strategy: ${{ steps.generate-jobs.outputs.strategy }}
+    steps:
+      - uses: actions/checkout@v1
+      - id: generate-jobs
+        name: Generate Jobs
+        run: echo "::set-output name=matrix::{\"include\":[{\"version\":\"2.4.1\",\"php\":{\"version\":\"7.4\",\"variant\":\"alpine\"}}]}"
+
+  build:
+    name: "${{ matrix.version }}-php-${{ matrix.php.version }}-${{ matrix.php.variant }}"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - id: build
+        name: Build
+        run: echo "Hello, World"
+      - id: images
+        name: Images
+        run: echo "Hello, World"
