@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v1
       - id: build
         name: Build
-        run: echo "Hello, World"
+        run: docker build --build-arg PHP=${{ matrix.php.version }} --build-arg=${{ matrix.php.variant }} --tag serializator/magento:${{ matrix.version }}-php-${{ matrix.php.version }}-cli-${{ matrix.php.variant }} -
       - id: images
         name: Images
-        run: echo "Hello, World"
+        run: docker image ls
