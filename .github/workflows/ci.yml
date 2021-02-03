@@ -19,7 +19,7 @@ jobs:
         working-directory: ./lib
       - id: generate-jobs
         name: Generate Jobs
-        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[$(npm run versions)]}}"
+        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[$(npm run --silent versions)]}}"
         working-directory: ./lib
 
   build:
