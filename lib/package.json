@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "versions": "node index.js"
+  },
+  "dependencies": {
+    "semver": "^7.3.4"
+  }
+}

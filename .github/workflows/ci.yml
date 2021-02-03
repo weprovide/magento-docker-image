@@ -13,9 +13,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - id: install-dependencies
+        name: Install Dependencies
+        run: npm install
+        working-directory: ./lib
       - id: generate-jobs
         name: Generate Jobs
-        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[$(./versions.js)]}}"
+        run: echo "::set-output name=strategy::{\"matrix\":{\"include\":[$(npm run versions)]}}"
+        working-directory: ./lib
 
   build:
     needs: generate-jobs
