@@ -1,6 +1,6 @@
 FROM php:${php.version}-cli-${php.variant}
 
-<% if (php.version === '7.4') { %>
+<% if (semver.satisfies(php.version, '>= 7.4')) { %>
     RUN echo "Hello, World"
 <% } else { %>
     RUN echo "Foo, Bar"
