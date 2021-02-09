@@ -19,9 +19,7 @@ COPY --from=composer:1 /usr/bin/composer /usr/bin/composer
         git \
         libsodium-dev
 <% } else { %>
-    RUN echo "deb http://deb.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
-
-    RUN apt-get update && apt-get -t stretch-backports install -y \
+    RUN apt-get update && apt-get install -y \
         unzip \
         rsync \
         libfreetype6-dev \
