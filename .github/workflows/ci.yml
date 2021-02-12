@@ -36,9 +36,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - id: build
         name: Build
         run: ${{ matrix.build }}
+      - id: push
+        name: Push
+        run: docker push serializator/magento --all-tags
       - id: images
         name: Images
         run: docker image ls
