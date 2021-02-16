@@ -50,7 +50,5 @@ RUN docker-php-ext-install soap
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install sodium
 
-# "sockets" is only necessary for Magento >= 2.4
-<% if (semver.satisfies(semver.coerce(magento), '>= 2.4')) { %>
-    RUN docker-php-ext-install sockets
-<% } %>
+# "sockets" is only necessary for Magento >= 2.4 but apparently Magento Commerce (EE) 2.3 requires it as well
+RUN docker-php-ext-install sockets
