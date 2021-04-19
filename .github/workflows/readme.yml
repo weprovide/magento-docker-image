@@ -18,7 +18,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASS: ${{ secrets.DOCKERHUB_PASSWORD }}
         with:
-          destination_container_repo: serializator/magento
+          destination_container_repo: weprovide/magento
           provider: dockerhub
           short_description: 'A Docker image meant to be used in CI / CD processes for Magento platforms and environments'
           readme_file: 'README.md'

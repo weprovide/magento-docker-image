@@ -48,7 +48,7 @@ jobs:
         run: ${{ matrix.build }}
       - id: push
         name: Push
-        run: docker push serializator/magento --all-tags
+        run: docker push weprovide/magento --all-tags
       - id: images
         name: Images
         run: docker image ls
