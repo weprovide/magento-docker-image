@@ -48,6 +48,22 @@
             {
                 "version": "7.3",
                 "variant": "alpine3.12"
+            },
+            {
+                "version": "7.2",
+                "variant": "buster"
+            },
+            {
+                "version": "7.2",
+                "variant": "stretch"
+            },
+            {
+                "version": "7.2",
+                "variant": "alpine3.12"
+            }
+            {
+                "version": "7.2",
+                "variant": "alpine3.11"
             }
         ]
     }
