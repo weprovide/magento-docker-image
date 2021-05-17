@@ -1,70 +1,8 @@
 {
     ">= 2.4": {
-        "php": [
-            {
-                "version": "7.4",
-                "variant": "buster"
-            },
-            {
-                "version": "7.4",
-                "variant": "alpine3.13"
-            },
-            {
-                "version": "7.4",
-                "variant": "alpine3.12"
-            },
-            {
-                "version": "7.3",
-                "variant": "buster"
-            },
-            {
-                "version": "7.3",
-                "variant": "stretch"
-            },
-            {
-                "version": "7.3",
-                "variant": "alpine3.13"
-            },
-            {
-                "version": "7.3",
-                "variant": "alpine3.12"
-            }
-        ]
+        "php": "~7.4||~7.3"
     },
     ">= 2.3": {
-        "php": [
-            {
-                "version": "7.3",
-                "variant": "buster"
-            },
-            {
-                "version": "7.3",
-                "variant": "stretch"
-            },
-            {
-                "version": "7.3",
-                "variant": "alpine3.13"
-            },
-            {
-                "version": "7.3",
-                "variant": "alpine3.12"
-            },
-            {
-                "version": "7.2",
-                "variant": "buster"
-            },
-            {
-                "version": "7.2",
-                "variant": "stretch"
-            },
-            {
-                "version": "7.2",
-                "variant": "alpine3.12"
-            },
-            {
-                "version": "7.2",
-                "variant": "alpine3.11"
-            }
-        ]
+        "php": "~7.3||~7.2"
     }
 }
