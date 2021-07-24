@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cli": "node ./bin/cli",
+    "strategy": "node ./bin/cli strategy",
+    "build": "node ./bin/cli build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "lodash": "^4.17.21",
+    "semver": "^7.3.5"
+  }
+}

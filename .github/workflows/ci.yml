@@ -26,11 +26,11 @@ jobs:
       - id: install-dependencies
         name: Install NPM Dependencies
         run: npm install
-        working-directory: ./lib
+        working-directory: ./src
       - id: generate-jobs
         name: Generate Jobs
         run: echo "::set-output name=strategy::{\"matrix\":{\"include\":$(npm run --silent versions)}}"
-        working-directory: ./lib
+        working-directory: ./src
 
   build:
     needs: generate-jobs
