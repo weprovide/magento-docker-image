@@ -1,0 +1,24 @@
+name: Push README to Docker Hub
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - 'README.md'
+
+jobs:
+  push-readme:
+    runs-on: ubuntu-latest
+    name: Push README to Docker Hub
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push README to Docker Hub
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB_PASSWORD }}
+        with:
+          destination_container_repo: weprovide/magento
+          provider: dockerhub
+          short_description: 'A Docker image meant to be used in CI / CD processes for Magento platforms and environments'
+          readme_file: 'README.md'
