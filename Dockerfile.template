@@ -1,7 +1,6 @@
 FROM php:${php.version}-cli-${php.variant}
 
-# Magento 2 does not support Composer 2
-COPY --from=composer:1 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:${composer} /usr/bin/composer /usr/bin/composer
 
 <% if (php.variant.startsWith('alpine')) { %>
     RUN apk add --no-cache unzip \
